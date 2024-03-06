@@ -18,7 +18,7 @@ function App() {
 
   const {gameStats,handleGameStats,resetGameStats} = useGameContext();
 
-  const [isFinish,setIsFinish] = useState(gameStats?.gameStatus !== "CONTINUE");
+  const [isFinish,setIsFinish] = useState(false);
 
 
   const changeInputs = (gameStatus:string) => {
