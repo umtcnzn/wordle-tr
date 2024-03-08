@@ -41,6 +41,12 @@ function App() {
         duration:1500
       });
     }
+    
+    if(input.toLocaleLowerCase("tr") === gameStats.solution){
+      setIsFinish(true);
+      changeInputs("WIN");
+      return;
+    }
 
     if(index === inputs.length - 1){
       setIsFinish(true);
@@ -48,11 +54,6 @@ function App() {
       return;
     }
 
-    if(input.toLocaleLowerCase("tr") === gameStats.solution){
-      setIsFinish(true);
-      changeInputs("WIN");
-      return;
-    }
     changeInputs("CONTINUE");
     
   }
